@@ -1,8 +1,19 @@
 import React from 'react'
-
-function SignUp() {
+import SignUpContainer from '../SignUpContainer'
+import UserInformation from '../UserInformation'
+import { useState } from 'react';
+function SignUp()  {
+  const [currentForm, setCurrentForm] = useState('Signup');
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
   return (
-    <div>WEEEE</div>
+  <div>
+      {
+        currentForm === "Signup" ? <SignUpContainer onFormSwitch={toggleForm} /> : <UserInformation onFormSwitch={toggleForm} />
+      }
+    
+  </div>
   )
 }
 

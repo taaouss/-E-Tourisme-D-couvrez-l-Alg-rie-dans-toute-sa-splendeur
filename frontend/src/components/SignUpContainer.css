@@ -1,0 +1,135 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height:90vh ;
+  background-color: rgba(99, 32, 238, 0.7); 
+  }
+  .text{
+    font-size: 60px;
+  }
+.grid-container{
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 8px 10px rgba(99, 32, 238, 0.2);
+    background-color:#fff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.colonne-1{
+    background: url("../../public/images/login.png") center center/cover no-repeat;
+    margin: 20px;
+}
+.colonne-2{
+    display: flex;
+    flex-direction: column;
+}
+.colonne-2 >h2{
+    font-size: 30px;
+    color:rgba(99, 32, 238);
+    margin: 25px;
+  
+   
+}
+.lien{
+
+  color:rgba(99, 32, 238);
+  margin-left: 120px;
+ 
+}
+.btn--login{
+margin: 60px;
+width: 300px;
+font-size: large;
+border-radius: 5px;
+color: rgba(99, 32, 238, 0.9);
+background-color: rgba(99, 32, 238, 0.6);
+}
+.user-input {
+  padding: 10px;
+  margin-bottom: 4px;
+  border: 3px;
+  border: rgba(99, 32, 238);
+  border-radius: 10px;
+  background-color:rgba(99, 32, 238,0.4) ;
+}
+.register-form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  font-weight: bold;
+  color:  rgba(99, 32, 238);
+  margin-bottom: 5px;
+}
+textarea {
+  padding: 0.4rem;
+  width: 90%;
+  border: 1px solid;
+}
+.submitBTN{
+  margin-left:80px ;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color:  rgba(99, 32, 238);
+  background-color:rgba(99, 32, 238,0.2);
+  border-color: rgba(99, 32, 238) ;
+}
+
+@media screen and (max-width: 960px){
+    .grid-container{
+        width: 550px;
+        height: 350px;
+       
+    }  
+    .colonne-2 >h2{
+        font-size: 25px;
+        margin: 25px;
+       
+    }
+    .lien{
+        padding-left: 20px;
+        margin-left: 35px;
+       
+      }
+      .btn--login{
+      margin: 40px;
+      margin-top: 30px;
+      width: 200px;
+      
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 2px;
+        border: 1px;
+       
+      }
+      .submitBTN{
+        margin-left:70px ;
+        margin-top: 13px;
+        width: 120px;
+        height: 25px;
+       
+      }
+}
+
+@media screen and (max-width: 600px){
+  .grid-container{
+    width: 450px;
+    height: 350px;
+   
+} 
+.colonne-2 >h2{
+  font-size: 22px;
+  margin: 15px;
+}
+.submitBTN{
+  margin-left:45px ;
+  margin-top: 15px;
+}
+}
