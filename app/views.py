@@ -5,6 +5,9 @@ from rest_framework import status
 from .models import Annonce , Position , Client , Photo
 from .serializer import AnnonceSerializer , ClientSerializer 
 # Create your views here.
+def front(request):
+    context = { }
+    return render(request, "index.html", context)
 @api_view(['GET'])
 def Annonce_list(request):
     annonces = Annonce.objects.all()
