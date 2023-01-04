@@ -1,12 +1,10 @@
 from django.db import models
 # Create your models here.
 
-    
-    
 
 class Position(models.Model):
     commune = models.CharField(max_length=25, null=False)
-    adresse = models.CharField(max_length=25 , primary_key=True)
+    adresse = models.CharField(max_length=25 , primary_key=True, null=False)
     
     Wilaya = (
         ("Adrar", "Adrar"),
@@ -74,19 +72,14 @@ class Position(models.Model):
     def __str__(self):
         return self.adresse
 
-class Photo(models.Model):
-    image = models.ImageField()
-    def __str__(self):
-        return self.image
+
+class Client(models.Model):
+    email = models.EmailField(max_length=35 , null=False , primary_key=True)
+    nom = models.CharField(max_length=25 , null=False)
+    prenom = models.CharField(max_length=25 , null=False)
+    telephone = models.IntegerField(max_length=10 , null=False)
     
 class Annonce(models.Model):
-    surface = models.FloatField(null=False)
-    prix = models.IntegerField(max_length=10000 , null=False)
-    description = models.TextField(blank=True)
-    date = models.DateTimeField(auto_now_add=True)
-    pos = models.OneToOneField(Position, on_delete=models.CASCADE  , null=False)
-    photos = models.ForeignKey(Photo , on_delete=models.CASCADE , null=False)
-    
     
     Aonnonce_Type = (
         ("T" , "Terrain"),
@@ -102,17 +95,30 @@ class Annonce(models.Model):
         ("L", "Location"),
         ("LV", "Location pour vacance")
     )
+    annonceID = models.AutoField(auto_created=True,primary_key=True , null=False)
     categories = models.CharField(max_length=50 , choices= Categorie , null=False)
     types = models.CharField(max_length=50 , choices= Aonnonce_Type, null=False)
+    surface = models.FloatField(null=False)
+    prix = models.IntegerField(null=False)
+    description = models.TextField(blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    client = models.ForeignKey(Client , on_delete=models.CASCADE , null=False )
+    pos = models.OneToOneField(Position, on_delete=models.CASCADE  , null=False)
+    
     
     def __str__(self):
         return self.description
     
-class Client(models.Model):
-    email = models.EmailField(max_length=35 , null=False , primary_key=True)
-    nom = models.CharField(max_length=25 , null=False)
-    prenom = models.CharField(max_length=25 , null=False)
-    telephone = models.IntegerField(max_length=10 , null=False)
-    annonces = models.ForeignKey(Annonce , on_delete=models.CASCADE )
+class Photo(models.Model):
+    photoID = models.AutoField(auto_created=True,primary_key=True , null=False)
+    image = models.ImageField()
+    annonce = models.ForeignKey(Annonce , on_delete=models.CASCADE , null=False)
     def __str__(self):
-        return self.email
+        return self.image
+    
+class Message(models.Model):
+    messageID = models.AutoField(auto_created=True,primary_key=True , null=False)
+    annonce = models.ForeignKey(Annonce , on_delete=models.CASCADE , null=False)
+    client = models.ForeignKey(Client , on_delete=models.CASCADE , null=False )
+    description = models.TextField(null=False)
+    
