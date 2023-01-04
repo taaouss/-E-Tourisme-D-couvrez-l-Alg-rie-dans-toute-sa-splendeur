@@ -6,6 +6,7 @@ import Home from './components/pages/Home' ;
 import Services from './components/pages/Services'
 import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
+import TestPopup from './components/pages/TestPopup';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
     <Navbar/>
     <Routes>
     <Route index element={<Home/>}/>
-    <Route path="Services"  element={<Services/>}/>
+    <Route path="Services"  element={<TestPopup/>}/>
     <Route path="Login" element={<Login/>}/>
     <Route path="signup" element={<SignUp/>}/>
     </Routes>
