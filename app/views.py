@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-from app.models import Annonce , Position , Client , Photo
-from app.serializer import AnnonceSerializer , ClientSerializer 
+from .models import Annonce , Position , Client , Photo
+from .serializer import AnnonceSerializer , ClientSerializer 
 # Create your views here.
 @api_view(['GET'])
 def Annonce_list(request):

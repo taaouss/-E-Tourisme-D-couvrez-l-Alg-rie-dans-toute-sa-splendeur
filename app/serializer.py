@@ -1,6 +1,6 @@
 from django.forms import IntegerField
 from rest_framework import serializers
-from app.models import Annonce , Client
+from .models import Annonce , Client
 
 class AnnonceSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only = True)
