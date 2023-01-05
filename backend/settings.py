@@ -90,8 +90,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tp_bdd',
         'HOST' : '127.0.0.1',
-        'USER': 'root',
-        'PASSWORD' : '31060776',
+        'USER': 'testuser',
+        'PASSWORD' : 'testuser',
         'PORT' : 3306
     }
 }
