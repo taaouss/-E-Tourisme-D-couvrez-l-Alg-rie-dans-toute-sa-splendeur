@@ -85,6 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 DATABASES = {
+    #it should work 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tp_bdd',
