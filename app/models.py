@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from datetime import datetime
 # Create your models here.
 
 
@@ -74,10 +76,10 @@ class Position(models.Model):
 
 
 class Client(models.Model):
-    email = models.EmailField(max_length=35 , null=False , primary_key=True)
+    email = models.TextField(max_length=35 , null=False , primary_key=True)
     nom = models.CharField(max_length=25 , null=False)
     prenom = models.CharField(max_length=25 , null=False)
-    telephone = models.IntegerField(max_length=10 , null=False)
+    telephone = models.IntegerField( null=False)
     
 class Annonce(models.Model):
     
@@ -101,7 +103,7 @@ class Annonce(models.Model):
     surface = models.FloatField(null=False)
     prix = models.IntegerField(null=False)
     description = models.TextField(blank=True)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=datetime.now)
     client = models.ForeignKey(Client , on_delete=models.CASCADE , null=False )
     pos = models.OneToOneField(Position, on_delete=models.CASCADE  , null=False)
     
