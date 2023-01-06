@@ -39,6 +39,24 @@ def annonce(request, pk):
         annonce.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
    
+@api_view(['DELETE'])
+def delete_annonce(request, pk):
+    annonce.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
+
+    
+@api_view(['GET'])
+def show_annonce(request, pk):
+    lesannonces = AnnonceSerializer(annonce)
+    return Response(lesannonces.data)
+    
+@api_view(['PUT'])
+def modifier_annonce(request, pk):
+    lesannonces = AnnonceSerializer(annonce, data=request.data)
+    if lesannonces.is_valid():
+        lesannonces.save()
+        return Response(lesannonces.data)
+    return lesannonces.errors
    
 @api_view(['GET'])
 def Client_list(request):
@@ -71,3 +89,22 @@ def client(request, pk):
     if request.method == 'DELETE':
         client.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+@api_view(['DELETE'])
+def delete_client(request, pk):
+    client.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
+
+    
+@api_view(['GET'])
+def show_client(request, pk):
+    lesclients = ClientSerializer(client)
+    return Response(lesclients.data)
+    
+@api_view(['PUT'])
+def modifier_client(request, pk):
+    lesclients = ClientSerializer(client , data=request.data)
+    if lesclients.is_valid():
+        lesclients.save()
+        return Response(lesclients.data)
+    return lesclients.errors

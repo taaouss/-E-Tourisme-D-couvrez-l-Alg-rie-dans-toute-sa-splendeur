@@ -36,5 +36,12 @@ class ClientSerializer(serializers.Serializer):
     telephone = serializers.IntegerField(allow_null=False)
     annonces = serializers.CharField(allow_null=True)
     
-    #def create(self , data):
-      #  return Client.objects.create(**data)
+    def create(self , data):
+        return Client.objects.create(**data)
+    
+    def update(self, instance, data):
+        instance.email = data.get('email', instance.email)
+        instance.nom = data.get('nom', instance.nom)
+        instance.prenom = data.get('prenom', instance.prenom)
+        instance.telephone = data.get('telephone', instance.telephone)
+        instance.annonces = data.get('annonces', instance.annonces)
