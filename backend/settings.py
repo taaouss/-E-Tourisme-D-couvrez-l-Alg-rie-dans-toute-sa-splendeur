@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     #it should work 
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tp_bdd',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'tp',
         'HOST' : '127.0.0.1',
-        'USER': 'testuser',
-        'PASSWORD' : 'testuser',
+        'USER': 'user',
+        'PASSWORD' : 'user',
         'PORT' : 3306
     }
 }
