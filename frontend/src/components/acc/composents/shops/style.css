@@ -1,0 +1,43 @@
+.shop .category {
+    padding: 30px;
+    height: 55vh;
+  }
+  .shop .category .box {
+    background-color: #f6f9fc;
+    margin: 15px 0;
+    padding: 5px 10px;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  .shop .category .h {
+    display : flex;
+    height : 5vh;
+    justify-content: center;
+    align-items: center;
+    text-size-adjust: 25px;
+  }
+  
+  
+  
+  
+  
+  .shop .contentWidth {
+    margin-left: 30px;
+  }
+  
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .shop .product img {
+    width: 100%;
+    height: 100%;
+  }
+  .shop .product {
+    transition: 0.5s;
+  }
+  .shop .product:hover {
+    box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  }
+  

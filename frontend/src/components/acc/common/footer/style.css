@@ -1,0 +1,27 @@
+footer {
+    background-color: #6320ee;
+    padding: 100px 0;
+    color: #fff;
+  }
+  footer h7 {
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    
+  }
+  
+  footer p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  footer h2 {
+    margin-bottom: 20px;
+  }
+  footer li {
+    margin-bottom: 10px;
+    opacity: 0.5;
+  }

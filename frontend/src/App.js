@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home' ;
-import Services from './components/pages/Services'
+import Accueil from './components/acc/Accueil';
 import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
-import TestPopup from './components/pages/TestPopup';
+
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
     <Navbar/>
     <Routes>
     <Route index element={<Home/>}/>
-    <Route path="Services"  element={<TestPopup/>}/>
+    <Route path="Services"  element={<Accueil/>}/>
     <Route path="Login" element={<Login/>}/>
     <Route path="signup" element={<SignUp/>}/>
     </Routes>
