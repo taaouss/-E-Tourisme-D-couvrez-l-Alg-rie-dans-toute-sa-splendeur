@@ -7,7 +7,7 @@ import Search from "./Search"
 const Header = () => {
   return (
     <>
-      <Head />
+     
       <Search />
     </>
   )

@@ -1,6 +1,11 @@
 .shop .category {
     padding: 30px;
-    height: 55vh;
+    height: 70vh;
+  }
+  .category {
+    margin-left: 20px;
+    background-color: rgba(99, 32, 238,0.8);
+    
   }
   .shop .category .box {
     background-color: #f6f9fc;
@@ -9,6 +14,7 @@
     transition: 0.5s;
     border-radius: 5px;
   }
+ 
   .shop .category .h {
     display : flex;
     height : 5vh;
@@ -16,9 +22,6 @@
     align-items: center;
     text-size-adjust: 25px;
   }
-  
-  
-  
   
   
   .shop .contentWidth {
@@ -39,5 +42,20 @@
   }
   .shop .product:hover {
     box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  }
+ .voirplus {
+    background: none;
+    color: #6320ee;
+    font-size: 20px;
+    transition: 0.5s;
+    border: 1px solid rgb(3 0 71 / 9%);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .voirplus:hover {
+    cursor: pointer;
+    background-color: rgba(99, 32, 238,0.6);
+    color: #fff;
   }
   

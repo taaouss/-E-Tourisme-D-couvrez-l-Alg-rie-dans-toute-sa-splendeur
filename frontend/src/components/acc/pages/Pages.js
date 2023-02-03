@@ -7,7 +7,7 @@ const Pages = ({shopItems }) => {
   return (
     <>
       <Shop shopItems={shopItems}  />    
-     <Wrapper/>
+      <Wrapper/>
     </>
   )
 }

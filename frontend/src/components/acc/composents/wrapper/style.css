@@ -17,9 +17,12 @@
   .wrapper .product h3 {
     font-weight: 500;
   }
+  .icon-circle{
+    background-color: rgba(99, 32, 238,0.4);
+  }
   .wrapper p {
     font-size: 15px;
     margin-top: 20px;
-    color: grey;
+    color:  rgba(99, 32, 238);
   }
   

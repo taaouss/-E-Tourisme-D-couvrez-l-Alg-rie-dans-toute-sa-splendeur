@@ -9,7 +9,6 @@ const Shop = ({ shopItems }) => {
       <section key={shopItems.id} className='shop background'>
         <div className=' d_flex'>
           <Catg />
-
           <div className='contentWidth'>
             <div className='heading d_flex'>
               <div className='heading-left row  f_flex'>

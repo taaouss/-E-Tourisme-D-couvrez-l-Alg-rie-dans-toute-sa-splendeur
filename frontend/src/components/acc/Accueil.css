@@ -91,7 +91,7 @@ button {
   padding: 0 20px;
 }
 .category .box:hover {
-  background-color: #ffe1e6;
+  background-color: #df95e8;
   cursor: pointer;
 }
 
@@ -102,10 +102,26 @@ button {
 .product {
   background: #fff;
   padding: 20px;
-  position: relative;
-  border-radius: 8px;
-  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  padding-left: 10px;;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color:rgba(99, 32, 238, 0.4) ;
+  box-shadow: 6px 6px rgba(99, 32, 238, 0.1);
   margin: 10px;
+  width: 300px;
+  height: 300px;
+}
+.service-product{
+  background:rgba(99, 32, 238, 0.3) ;;
+  padding: 20px;
+  padding-left: 10px;
+  border: 2px solid;
+  border-radius: 8px;
+  border-color:rgba(99, 32, 238, 0.4) ;
+  box-shadow: 6px 6px rgba(99, 32, 238, 0.1);
+  margin: 10px;
+  width: 300px;
+  height: 300px; 
 }
 .product h3 {
   font-weight: 400;
@@ -117,21 +133,7 @@ button {
   justify-content: space-between;
   color: #6320ee;
 }
-.price button {
-  background: none;
-  color: #6320ee;
-  font-size: 20px;
-  transition: 0.5s;
-  border: 1px solid rgb(3 0 71 / 9%);
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-}
-.price button:hover {
-  cursor: pointer;
-  background-color: #e94560;
-  color: #fff;
-}
+
 
 
 /*---------product-----------*/

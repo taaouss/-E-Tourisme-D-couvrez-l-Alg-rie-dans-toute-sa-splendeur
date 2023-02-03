@@ -16,7 +16,7 @@ export default function Popup(props) {
             <Carousel/>
             </div>
             <div className='c-1-2'>
-            <AiInformations/>
+            <AiInformations name={props.shopItem}/>
             </div>
           </div>
           <div className='c-2'>

@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center; 
     min-width: 100vh;
+  
     
 }
  .popup{
@@ -13,10 +14,11 @@
   left:0;
   width: 200vh;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
  }
 
  .popup-inner{

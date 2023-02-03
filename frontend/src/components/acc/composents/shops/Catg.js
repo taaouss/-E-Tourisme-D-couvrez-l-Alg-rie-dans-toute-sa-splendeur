@@ -22,7 +22,7 @@ const Catg = () => {
     },
   ]
   return (
-    <>
+   
       <div className='category'>
         <div className='h'>
 
@@ -38,7 +38,7 @@ const Catg = () => {
           )
         })}
       </div>
-    </>
+   
   )
 }
 

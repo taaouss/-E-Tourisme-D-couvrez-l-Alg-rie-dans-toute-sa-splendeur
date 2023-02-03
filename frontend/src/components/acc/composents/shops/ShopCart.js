@@ -1,37 +1,37 @@
-import React from "react"
-import { Link } from "react-router-dom"
-
+import React , { useState } from "react"
+import Popup   from "../../../Popup"
+import "../../../Popup.css"
+import Wrapper from "../wrapper/Wrapper";
 
 const ShopCart = ({ shopItems}) => {
   console.log(shopItems.filter(shopItems=>shopItems.name.includes("villa")));
-  
+  const [buttonPopup ,setButtonPopup]=useState(false);
   return (
     <>
-      {shopItems.map((shopItems) => {
+      {shopItems.map((shopItem) => {
         return (
           <div className='box'>
             <div className='product mtop'>
               <div className='img' >
-                <img  src={shopItems.cover} alt='' />
+                <img  src={shopItem.cover} alt='' />
               </div>
               <div className='product-details'>
-                <h4>{shopItems.name}</h4>
+                <h4>{shopItem.name}</h4>
                 <h3>128 m°</h3>
                 <div className='price'>
-                  <h4>{shopItems.price}.00 DA </h4>
+                  <h4>{shopItem.price}.00 DA </h4>
                 
-                  <button>
-                    <Link to='/profil'>
-                    <i className='fa fa-plus'></i>     {/*dagui anajouti le pop up im*/}
-                    </Link>
+                  <button className="voirplus" onClick={()=>{setButtonPopup(true)}}>
+                     voir plus   
                   </button>
-
+                  <Popup trigger={buttonPopup} setTrigger={setButtonPopup} shopItem={shopItem}/> 
                 </div>
               </div>
             </div>
           </div>
         )
       })}
+     
     </>
   )
 }

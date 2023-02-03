@@ -1,6 +1,6 @@
 import React from "react"
 import "./Accueil.css"
-import {BrowserRouter as Router ,Routes, Route} from 'react-router-dom';
+import Shop from "./composents/shops/Shop"
 import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import Pages from "./pages/Pages";
@@ -10,14 +10,16 @@ import Profil from "./common/profil/Profil";
 
 
 
+
 function App() {
   const { shopItems } = Sdata
   return (
     <>
     
-        <Header/>
-       <Pages shopItems={shopItems}/>
-        <Footer /> 
+       <Header/>
+     
+      <Pages shopItems={shopItems}/>
+      
          
     </>
   )

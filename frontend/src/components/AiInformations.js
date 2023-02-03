@@ -1,10 +1,10 @@
 import React from 'react'
 import"./AiInformations.css"
-function AiInformations () {
+function AiInformations (props) {
   return (
     <div className='AiInformations-container'>
       <div className='AI-titre'>
-         <h2>le titre de l'annonce </h2>
+         <h2>{props.name.name}</h2>
          <button>Faire une offre </button>
        </div>
        <div className='col-div'>
@@ -16,7 +16,7 @@ function AiInformations () {
         </div>
         <div className='c--2'>
         <h4  className='info'><i class="fa-solid fa-sack-dollar"></i>  Prix </h4>
-        <p> info </p>
+        <p>{props.name.price}.00 DA</p>
         <h4  className='info'><i class="fa-sharp fa-solid fa-maximize"></i>Surface </h4>
         <p> info </p>
         </div>
@@ -25,9 +25,7 @@ function AiInformations () {
         <h3>Description</h3>
         <p>DescriptionDescriptionDescription
            DescriptionDescriptionDescription 
-           DescriptionDescriptionDescription 
-           DescriptionDescriptionDescription
-        </p>
+         </p>
        </div>
     </div>
   )

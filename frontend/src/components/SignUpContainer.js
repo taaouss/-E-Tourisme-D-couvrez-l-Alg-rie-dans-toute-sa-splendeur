@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './SignUpContainer.css'
-import { useEffect , useState } from 'react'
+
 
 
 function LoginContainer(props) {
