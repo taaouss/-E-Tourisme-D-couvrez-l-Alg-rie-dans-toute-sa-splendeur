@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center; 
-  height:90vh ;
+  height:100vh ;
   background-color: rgba(99, 32, 238, 0.7); 
   }
   .text{
@@ -42,14 +42,21 @@
 .btn--login{
 margin: 60px;
 width: 300px;
+height: 50px;
 font-size: large;
 border-radius: 5px;
 color: rgba(99, 32, 238, 0.9);
-background-color: rgba(99, 32, 238, 0.6);
+background-color: rgba(99, 32, 238, 0.2);
+cursor: pointer;
+}
+.btn--login:hover 
+{
+  color: rgba(255, 255, 255, 0.9);
+background-color: rgba(99, 32, 238, 0.9);
 }
 .user-input {
   padding: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   border: 3px;
   border: rgba(99, 32, 238);
   border-radius: 10px;
@@ -62,12 +69,18 @@ background-color: rgba(99, 32, 238, 0.6);
 label{
   font-weight: bold;
   color:  rgba(99, 32, 238);
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  height: 20px;
 }
 textarea {
   padding: 0.4rem;
   width: 90%;
   border: 1px solid;
+}
+.colonne-2 >h2{
+  font-size: 30px;
+  margin-bottom: 0px;
+ 
 }
 .submitBTN{
   margin-left:80px ;
@@ -79,6 +92,7 @@ textarea {
   color:  rgba(99, 32, 238);
   background-color:rgba(99, 32, 238,0.2);
   border-color: rgba(99, 32, 238) ;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 960px){

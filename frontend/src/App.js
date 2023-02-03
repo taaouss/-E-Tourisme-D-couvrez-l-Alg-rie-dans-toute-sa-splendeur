@@ -8,16 +8,17 @@ import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
 
 
+
 function App() {
   return (
     <>
     <Router>
-    <Navbar/>
+     {/*<Navbar/>*/} 
     <Routes>
     <Route index element={<Home/>}/>
-    <Route path="Services"  element={<Accueil/>}/>
-    <Route path="Login" element={<Login/>}/>
+    <Route path="accueil"  element={<Accueil/>}/>
     <Route path="signup" element={<SignUp/>}/>
+    <Route path="login" element={<Login/>}/>
     </Routes>
     </Router>
     </> 

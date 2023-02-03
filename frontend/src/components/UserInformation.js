@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './SignUpContainer.css'
 
 function UserInformation() {
@@ -15,7 +16,9 @@ function UserInformation() {
 
     <div className='container'>
      <div className='grid-container'>
-        <div className='colonne-1'/>
+        <div className='colonne-1'>
+        <Link to='/'> <i className='fa fa-house'></i></Link>
+        </div>
         <div className='colonne-2'> 
           <h2> Vos informations </h2> 
           <form className="register-form" onSubmit={handleSubmit}>
@@ -27,7 +30,7 @@ function UserInformation() {
             <input className='user-input'  value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="numero de telephone"  />
             <label>votre adresse:</label>
             <input className='user-input' value={adress} onChange={(e) => setAdress(e.target.value)}  placeholder="adresse"   />
-            <button type="submit" className='submitBTN'>valider</button>
+           <Link to="/accueil"><button type="submit" className='submitBTN'>valider</button></Link> 
         </form>
          </div>
      </div>

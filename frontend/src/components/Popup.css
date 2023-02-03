@@ -57,10 +57,12 @@
    border-color: transparent;
    width: 20px;
    height: 20px;
+   cursor: pointer;
  }
  .close-btn1{
   opacity: 0;
   height: 0px;
+
 }
  .Contact-container{
   display: flex;
@@ -154,6 +156,7 @@
   width: 20px;
   height: 20px;
   margin-left: 450px;
+  cursor: pointer;
 }
 .c-2{
   background-color:transparent;
