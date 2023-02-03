@@ -23,7 +23,7 @@ const Search = () => {
           <div className='icon f_flex width'>
            
             <div>
-              <Link to='/'>
+              <Link to='/accueil'>
                <i className='fa fa-house icon-circle'></i>
               </Link>
             </div>

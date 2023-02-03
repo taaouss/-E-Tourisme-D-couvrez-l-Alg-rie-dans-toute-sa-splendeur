@@ -6,6 +6,7 @@ import Home from './components/pages/Home' ;
 import Accueil from './components/acc/Accueil';
 import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
+import AjouterAI from './components/pages/AjouterAI';
 
 
 
