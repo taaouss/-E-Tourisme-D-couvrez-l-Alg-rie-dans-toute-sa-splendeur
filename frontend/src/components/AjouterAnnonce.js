@@ -52,7 +52,7 @@ export default function AjouterAnnonce() {
            <input className='user-input'  value={commune} onChange={(e) => setCommune(e.target.value)} placeholder="commune"  />
            <label>L'adresse du bien:</label>
            <input className='user-input' value={adresse} onChange={(e) => setAdresse(e.target.value)}  placeholder="adresse"   />
-          <Link to="/"><button type="submit" className='submitBTNAI'>valider</button></Link> 
+          <Link to="/profil"><button type="submit" className='submitBTNAI'>valider</button></Link> 
        </form>
        </div>
     </div>

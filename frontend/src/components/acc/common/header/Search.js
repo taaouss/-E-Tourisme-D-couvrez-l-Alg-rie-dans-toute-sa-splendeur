@@ -29,10 +29,9 @@ const Search = () => {
             </div>
 
             <div>
-              <Link to='profil'>
+              <Link to='/profil'>
               <i className='fa fa-user icon-circle'></i>
               </Link>
-             
              
             </div>
           

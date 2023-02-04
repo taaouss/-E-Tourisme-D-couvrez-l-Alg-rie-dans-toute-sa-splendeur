@@ -6,13 +6,20 @@ import "./Popup.css"
 import Carousel from './Carousel'
 
 export default function Popup(props) {
+    const user={
+      nom:"manel",
+      prenom:"khalili",
+      adresse:"Freha, Tizi-ouzou",
+      mail:"manel@gmail.com",
+      numero:"0758693214",
+    }
   return (props.trigger) ? (
     <div className='popup'>
         <div className='popup-inner'>
           <div className='c-1'>
           <div><button className='close-btn1' onClick={()=>{props.setTrigger(false)}}><i class="fa-solid fa-xmark"></i></button></div>
             <div className='c-1-1'>
-            <Contact/>
+            <Contact props={user}/>
             <Carousel/>
             </div>
             <div className='c-1-2'>

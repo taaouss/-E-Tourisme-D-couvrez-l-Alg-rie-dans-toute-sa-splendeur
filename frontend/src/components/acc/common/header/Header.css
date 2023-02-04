@@ -104,7 +104,9 @@
     font-size: 15px;
     font-weight: 400;
   }
- 
+  header ul li a:hover {
+    color: #ff014f;
+  }
   
   .open {
     display: none;

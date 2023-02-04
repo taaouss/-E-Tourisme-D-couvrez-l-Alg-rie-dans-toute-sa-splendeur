@@ -6,22 +6,22 @@ const Wrapper = () => {
     {
       cover: <i class='fa-solid fa-truck-fast'></i>,
       title: "Accessible dans tout le territoire Algérien",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
-    },
-    {
-      cover: <i class='fa-solid fa-id-card'></i>,
-      title: "Safe Payment",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      decs: "Nous offrons des prix compétitifs sur nos plus de 100 millions de produits, quelle que soit leur gamme.",
     },
     {
       cover: <i class='fa-solid fa-shield'></i>,
-      title: "Shop With Confidence ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      title: "Achetez en toute confiance ",
+      decs: "Toutes les annonces seront verifier par l'un de nos agents , vous garantissant ainsi des annonces immoblières de confiance .",
     },
     {
       cover: <i class='fa-solid fa-headset'></i>,
-      title: "Continual Support ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      title: "Assistance continue ",
+      decs: "notre équipe sera là pour vous offrir une meilleure expérience.",
+    },
+    {
+      cover: <i class='fa-solid fa-id-card'></i>,
+      title: "Données sécurisées",
+      decs: "Toutes vos données seront mises en sécurité .",
     },
   ]
   return (

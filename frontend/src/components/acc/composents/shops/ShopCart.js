@@ -1,7 +1,7 @@
 import React , { useState } from "react"
 import Popup   from "../../../Popup"
 import "../../../Popup.css"
-import Wrapper from "../wrapper/Wrapper";
+
 
 const ShopCart = ({ shopItems}) => {
   console.log(shopItems.filter(shopItems=>shopItems.name.includes("villa")));

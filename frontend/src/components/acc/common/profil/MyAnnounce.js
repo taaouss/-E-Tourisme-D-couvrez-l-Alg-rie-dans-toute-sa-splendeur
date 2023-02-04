@@ -1,7 +1,10 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import Contact from "../../../Contact"
+import UserInformation from "../../../UserInformation"
 import "./MyAnnounce.css"
 
-const MyAnnounce = ({ CartItem, decrease }) => {
+const MyAnnounce = ({ CartItem, decrease , client}) => {
  
 
   return (
@@ -10,9 +13,9 @@ const MyAnnounce = ({ CartItem, decrease }) => {
       <section className='cart-items'>
       <h5>Mes Annonces</h5>
       <div className='cartControl'>
-                      <button> Ajouter Une Annonce
-                      </button>
-                    </div>
+        <Link to="/ajouter-annonce"> <button> Ajouter Une Annonce </button></Link>
+        <Link to='/accueil'> <i className='fa fa-house icon-circle'></i></Link>
+       </div>
         <div className='d_flex'>
         
           <div className='cart-details'>
@@ -49,10 +52,9 @@ const MyAnnounce = ({ CartItem, decrease }) => {
 
           <div className='cart-profil produuct'>
             <h2>Mon Profil</h2>
-            <div >
-
-              {/*ICI TU METS LES INFOS DE LUTILISATEUR*/}
-              
+            <div className="profil-co" >
+             <Contact props={client}></Contact>
+              <button>modifier profil</button>
             </div>
           </div>
           
