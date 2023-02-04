@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react"
+import MyAnnounce from "./MyAnnounce"
 
-export const Profil = () => {
+
+
+const Profil = ({ CartItem, decrease }) => {
   return (
-    <h1> profil </h1>
+    <>
+      <MyAnnounce CartItem={CartItem} decrease={decrease}/>
+    </>
   )
 }
+
 export default Profil
 
