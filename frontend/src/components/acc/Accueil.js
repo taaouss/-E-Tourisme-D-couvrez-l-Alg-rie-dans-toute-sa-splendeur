@@ -1,25 +1,32 @@
-import React from "react"
+import React, {useState} from "react"
 import "./Accueil.css"
-import Shop from "./composents/shops/Shop"
-import Footer from "./common/footer/Footer1"
-import Header from "./common/header/Header"
-import Pages from "./pages/Pages";
+import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import Sdata from "./composents/shops/Sdata";
 import Profil from "./common/profil/Profil";
-import Footer1 from './common/footer/Footer1'
+
+
 
 
 
 
 function App() {
   const { shopItems } = Sdata
-  return (
-    <>
+  
+  const [CartItem, setCartItem] = useState([])
+
+  const decrease = (product) => {
     
-      <Header/>
-      <Pages shopItems={shopItems}/>
-      <Footer1/>
-    </>
+    setCartItem(CartItem.filter((item) => item.id !== product.id))
+    
+}
+  return (
+
+
+<>
+<Profil CartItem={shopItems} decrease={decrease}/>
+  
+
+</>
   )
 }
 
