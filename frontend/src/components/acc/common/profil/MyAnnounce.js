@@ -21,7 +21,7 @@ const MyAnnounce = ({ CartItem, decrease }) => {
             {CartItem.map((item) => {
 
               return (
-                <div className='cart-list product d_flex' key={item.id}>
+                <div className='cart-list produuct d_flex' key={item.id}>
                   <div className='img'>
                     <img src={item.cover} alt='' />
                   </div>
@@ -47,7 +47,7 @@ const MyAnnounce = ({ CartItem, decrease }) => {
             })}
           </div>
 
-          <div className='cart-profil product'>
+          <div className='cart-profil produuct'>
             <h2>Mon Profil</h2>
             <div >
 
